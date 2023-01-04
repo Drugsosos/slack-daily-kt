@@ -1,4 +1,4 @@
-package models
+package model
 
 import jakarta.persistence.Entity
 import jakarta.persistence.Column
@@ -20,6 +20,6 @@ data class Attachment (
     val answer: Answer,
 
     @Column(name = "attachment", nullable = false)
-    val attachment: String
+    val fileUrl: String
 )
 

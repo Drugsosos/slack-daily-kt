@@ -1,4 +1,4 @@
-package models
+package model
 
 import jakarta.persistence.Entity
 import jakarta.persistence.Column
@@ -11,7 +11,7 @@ import jakarta.persistence.JoinColumn
 data class User (
     @Id
     @Column(name = "id", unique = true, nullable = false, length = 20)
-    val user: String,
+    val id: String,
 
     @Column(name = "started", nullable = false, updatable = true)
     var started: Boolean = false,

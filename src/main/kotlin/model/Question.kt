@@ -1,4 +1,4 @@
-package models
+package model
 
 import jakarta.persistence.Entity
 import jakarta.persistence.Column
@@ -20,6 +20,6 @@ data class Question (
     val channel: Channel,
 
     @Column(name = "body", nullable = false, updatable = true)
-    var body: String
+    var text: String
 )
 

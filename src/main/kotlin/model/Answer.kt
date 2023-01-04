@@ -1,4 +1,4 @@
-package models
+package model
 
 import jakarta.persistence.Entity
 import jakarta.persistence.Column
@@ -24,7 +24,7 @@ data class Answer (
     val question: Question,
 
     @Column(name = "answer", nullable=false, updatable=false)
-    val answer: String
+    val text: String
 )
 
 
