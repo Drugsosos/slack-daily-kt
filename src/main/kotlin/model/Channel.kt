@@ -10,15 +10,15 @@ data class Channel (
     @Column(name = "id", unique = true, nullable = false, length = 20)
     val id: String,
 
-    @Column(name = "team", nullable = false, updatable = false, length = 20)
-    val team: String,
-
-    @Column(name = "name", nullable = false, updatable = true)
-    var name: String,
+    @Column(name = "teamID", nullable = false, updatable = false, length = 20)
+    val teamID: String,
 
     @Column(name = "cron", nullable = true, updatable = true)
     var cron: Int? = null,
 
     @Column(name = "cron_timezone", nullable = true, updatable = true)
-    var cronTZ: String? = null
+    var cronTZ: String? = null,
+
+    @Column(name = "team_lead", nullable = true, updatable = true)
+    var teamLead: String? = null
 )

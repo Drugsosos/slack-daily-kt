@@ -19,7 +19,7 @@ data class Question (
     @JoinColumn(name = "id", nullable=false, updatable=false)
     val channel: Channel,
 
-    @Column(name = "body", nullable = false, updatable = true)
-    var text: String
+    @Column(name = "text", nullable = false, updatable = false)
+    val text: String
 )
 

@@ -23,7 +23,7 @@ data class Answer (
     @JoinColumn(name = "id", nullable = false, updatable=false)
     val question: Question,
 
-    @Column(name = "answer", nullable=false, updatable=false)
+    @Column(name = "text", nullable=false, updatable=false)
     val text: String
 )
 

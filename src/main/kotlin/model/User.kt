@@ -21,9 +21,6 @@ data class User (
 
     @ManyToOne
     @JoinColumn(name = "id", nullable=false, updatable=false)
-    val channel: Channel,
-
-    @Column(name = "real_name", nullable=true, updatable=true)
-    var realName: String? = null
+    val channel: Channel
 )
 

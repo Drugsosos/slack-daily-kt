@@ -19,7 +19,7 @@ data class Attachment (
     @JoinColumn(name = "id", nullable = false, updatable = false)
     val answer: Answer,
 
-    @Column(name = "attachment", nullable = false)
+    @Column(name = "file_url", nullable = false, updatable = false)
     val fileUrl: String
 )
 
