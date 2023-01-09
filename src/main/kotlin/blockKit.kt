@@ -8,7 +8,19 @@ import com.slack.api.model.block.composition.MarkdownTextObject
 import com.slack.api.model.block.composition.PlainTextObject
 
 
-class Block {
+/**
+ * Block kit templates
+ */
+class Blocks {
+
+    /**
+     * Attachment unit to be sent as a report in the channel
+     *
+     * @param header Question text (no markdown)
+     * @param body Answer text (has markdown)
+     * @param color Color of the strip on the left side of the block
+     * @return Report block unit
+     */
     fun reportAttachment(
         header: String,
         body: String,
@@ -26,6 +38,14 @@ class Block {
         ).color(color).build()
     }
 
+    /**
+     * Set of blocks to be sent to users on daily start
+     *
+     * @param header Greetings above divider
+     * @param body Something inspirational (yup, daily is hard, cheer 'em up)
+     * @param firstQuestion First question from question list
+     * @return Blocks to be sent on daily start
+     */
     fun startDaily(
         header: String,
         body: String,
@@ -47,6 +67,14 @@ class Block {
         )
     }
 
+    /**
+     * Set of blocks to be sent on daily end (all questions ended)
+     *
+     * @param header Show 'em your gratitude here and tag 'em
+     * @param body Something inspirational again (they have all day ahead)
+     * @param footer Where to find a report (add channel link here)
+     * @return Blocks to be sent on daily end
+     */
     fun endDaily (
         header: String,
         body: String,
@@ -67,6 +95,14 @@ class Block {
             ).build()
         )
     }
+
+    /**
+     * Blocks constructor for get questions command
+     *
+     * @param header Header of the list block
+     * @param parsedList List w/ all objects to be parsed
+     * @return List of blocks w/ parsed data
+     */
 
     fun numberedList (
         header: String,
@@ -90,6 +126,14 @@ class Block {
         return blocks
     }
 
+    /**
+     * Make errors and successes look beautiful
+     *
+     * @param status Choose status (changes emoji in blocks)
+     * @param header Error/Success summary
+     * @param body Error/Success main message (Optional)
+     * @return Status message block
+     */
     fun statusMessage(
         status: MessageStatus,
         header: String,
