@@ -1,3 +1,5 @@
+package enums
+
 /**
  * All statuses of informational messages
  *
