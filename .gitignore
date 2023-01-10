@@ -26,3 +26,6 @@ hs_err_pid*
 /.gradle/
 /build/
 /build/classes/kotlin/main/
+
+# Jetbrains stuff
+.idea/
